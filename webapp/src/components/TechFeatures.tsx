@@ -11,14 +11,16 @@ interface TechFeature {
 interface TechFeaturesProps {
   features: TechFeature[];
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function TechFeatures({
   features,
   primaryColor,
+  $bgColor,
 }: TechFeaturesProps) {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16" style={{ backgroundColor: $bgColor || "white" }}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">

@@ -10,15 +10,20 @@ interface BenefitsProps {
   title: string;
   items: Benefit[];
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function Benefits({
   title,
   items,
   primaryColor,
+  $bgColor,
 }: BenefitsProps) {
   return (
-    <section className="py-16 bg-gray-50">
+    <section
+      className="py-16"
+      style={{ backgroundColor: $bgColor || "#f9fafb" }}
+    >
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">

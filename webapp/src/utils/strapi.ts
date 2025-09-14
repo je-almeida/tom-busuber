@@ -3,6 +3,9 @@ import { STRAPI_PUBLIC_ROUTES, StrapiPublicRoutes } from "../constants/routes";
 export class Strapi {
   static async public(url: StrapiPublicRoutes, options: RequestInit = {}) {
     const baseUrl = process.env.STRAPI_BASE_URL || "";
+    console.log("Strapi Base URL:", baseUrl);
+    console.log("Requesting URL:", baseUrl + url);
+    console.log("With options:", options);
     return this.request(baseUrl + url, {
       ...options,
       headers: {
@@ -22,6 +25,7 @@ export class Strapi {
 
       const response = await fetch(url, options);
       if (!response.ok) {
+        console.log(response);
         throw new Error(`API request failed: ${response.statusText}`);
       }
       const responseJson = await response.json();

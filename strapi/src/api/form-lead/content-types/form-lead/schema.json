@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_leads",
+  "info": {
+    "singularName": "form-lead",
+    "pluralName": "form-leads",
+    "displayName": "FormLead"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "telefone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "nome_empresa": {
+      "type": "string"
+    },
+    "qtd_colaboradores": {
+      "type": "string"
+    },
+    "cidade": {
+      "type": "string"
+    },
+    "tipo_transporte": {
+      "type": "string"
+    },
+    "qtd_filiais": {
+      "type": "string"
+    },
+    "trabalhou_fretado_transporte_funcionarios": {
+      "type": "string"
+    },
+    "detalhes_operacao": {
+      "type": "richtext"
+    }
+  }
+}

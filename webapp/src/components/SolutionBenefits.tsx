@@ -7,6 +7,7 @@ interface SolutionBenefitsProps {
   image: string;
   ctaText: string;
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function SolutionBenefits({
@@ -15,9 +16,13 @@ export default function SolutionBenefits({
   image,
   ctaText,
   primaryColor,
+  $bgColor,
 }: SolutionBenefitsProps) {
   return (
-    <section className="py-16 bg-gray-50">
+    <section
+      className="py-16"
+      style={{ backgroundColor: $bgColor || "#f9fafb" }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto space-y-8">
           {/* Title */}

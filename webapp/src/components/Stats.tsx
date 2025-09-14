@@ -7,11 +7,22 @@ interface StatsProps {
   title: string;
   metrics: Metric[];
   primaryColor: string;
+  $bgColor?: string;
 }
 
-export default function Stats({ title, metrics, primaryColor }: StatsProps) {
+export default function Stats({
+  title,
+  metrics,
+  primaryColor,
+  $bgColor,
+}: StatsProps) {
   return (
-    <section className="py-16 bg-gradient-to-r from-gray-50 to-gray-100">
+    <section
+      className="py-16"
+      style={{
+        background: $bgColor || "linear-gradient(to right, #f9fafb, #f3f4f6)",
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Title */}

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Strapi } from "../../../utils/strapi";
 
 export async function POST(request: NextRequest) {
   try {
@@ -9,8 +10,23 @@ export async function POST(request: NextRequest) {
       ...data,
     });
 
-    // Simular processamento
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await Strapi.public("form-leads", {
+      method: "POST",
+      body: JSON.stringify({
+        data: {
+          email: data.email,
+          nome: data.nome,
+          telefone: data.telefone,
+          nome_empresa: data.empresa,
+          qtd_colaboradores: data.colaboradores,
+          cidade: data.cidade,
+          tipo_transporte: data.tipo_transporte,
+          qtd_filiais: data.filiais,
+          trabalhou_fretado_transporte_funcionarios: data.experiencia_fretados,
+          detalhes_operacao: data.detalhes,
+        },
+      }),
+    });
 
     return NextResponse.json(
       { message: "Formulário enviado com sucesso!" },

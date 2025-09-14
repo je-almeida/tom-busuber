@@ -13,6 +13,7 @@ interface EsgCommitmentProps {
   certificationImage: string;
   logos: Logo[];
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function EsgCommitment({
@@ -23,9 +24,13 @@ export default function EsgCommitment({
   certificationImage,
   logos,
   primaryColor,
+  $bgColor,
 }: EsgCommitmentProps) {
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      className="py-16"
+      style={{ backgroundColor: $bgColor || "#f9fafb" }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}

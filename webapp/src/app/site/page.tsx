@@ -39,6 +39,7 @@ export default async function SitePage() {
         subtitle={data.cta1.subtitle}
         anchor={data.cta1.anchor}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <ContactForm
@@ -48,6 +49,7 @@ export default async function SitePage() {
         consent={data.contactForm.consent}
         submitText={data.contactForm.submitText}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <ProblemSolution
@@ -56,6 +58,7 @@ export default async function SitePage() {
         description={data.problemSolution.description}
         image={data.problemSolution.image}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <SolutionBenefits
@@ -64,34 +67,40 @@ export default async function SitePage() {
         image={data.solutionBenefits.image}
         ctaText={data.solutionBenefits.ctaText}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <TechFeatures
         features={data.techFeatures}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <Benefits
         title={data.benefits.title}
         items={data.benefits.items}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <Stats
         title={data.stats.title}
         metrics={data.stats.metrics}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <Testimonials
         title={data.testimonials.title}
         items={data.testimonials.items}
+        $bgColor={branding.bgColor}
       />
 
       <HowItWorks
         title={data.howItWorks.title}
         steps={data.howItWorks.steps}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <FinalCta
@@ -101,6 +110,7 @@ export default async function SitePage() {
         ctaText={data.finalCta.ctaText}
         ctaLink={data.finalCta.ctaLink}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <EsgCommitment
@@ -111,15 +121,17 @@ export default async function SitePage() {
         certificationImage={data.esgCommitment.certificationImage}
         logos={data.esgCommitment.logos}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
       <Faq
         title={data.faq.title}
         items={data.faq.items}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
-      <Footer copyright={data.footer.copyright} />
+      <Footer copyright={data.footer.copyright} $bgColor={branding.bgColor} />
     </main>
   );
 }

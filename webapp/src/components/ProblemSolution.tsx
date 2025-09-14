@@ -6,6 +6,7 @@ interface ProblemSolutionProps {
   description: string;
   image: string;
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function ProblemSolution({
@@ -14,9 +15,10 @@ export default function ProblemSolution({
   description,
   image,
   primaryColor,
+  $bgColor,
 }: ProblemSolutionProps) {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16" style={{ backgroundColor: $bgColor || "white" }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}

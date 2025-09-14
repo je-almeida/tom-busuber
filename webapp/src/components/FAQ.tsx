@@ -11,9 +11,15 @@ interface FaqProps {
   title: string;
   items: FaqItem[];
   primaryColor: string;
+  $bgColor?: string;
 }
 
-export default function Faq({ title, items, primaryColor }: FaqProps) {
+export default function Faq({
+  title,
+  items,
+  primaryColor,
+  $bgColor,
+}: FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
@@ -22,8 +28,11 @@ export default function Faq({ title, items, primaryColor }: FaqProps) {
 
   return (
     <section
-      className="py-16 bg-gradient-to-b from-white to-gray-50"
-      style={{ backgroundImage: "url(/img/bg-pattern.png)" }}
+      className="py-16"
+      style={{
+        backgroundColor: $bgColor || "#f9fafb",
+        backgroundImage: "url(/img/bg-pattern.png)",
+      }}
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">

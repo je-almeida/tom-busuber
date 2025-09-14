@@ -8,6 +8,7 @@ interface FinalCtaProps {
   ctaText: string;
   ctaLink: string;
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function FinalCta({
@@ -17,9 +18,13 @@ export default function FinalCta({
   ctaText,
   ctaLink,
   primaryColor,
+  $bgColor,
 }: FinalCtaProps) {
   return (
-    <section className="py-16 bg-gradient-to-r from-gray-100 to-gray-200">
+    <section
+      className="py-16"
+      style={{ backgroundColor: $bgColor || "#f3f4f6" }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Image */}

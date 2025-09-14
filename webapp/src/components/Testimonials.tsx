@@ -8,11 +8,16 @@ interface Testimonial {
 interface TestimonialsProps {
   title: string;
   items: Testimonial[];
+  $bgColor?: string;
 }
 
-export default function Testimonials({ title, items }: TestimonialsProps) {
+export default function Testimonials({
+  title,
+  items,
+  $bgColor,
+}: TestimonialsProps) {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16" style={{ backgroundColor: $bgColor || "white" }}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">

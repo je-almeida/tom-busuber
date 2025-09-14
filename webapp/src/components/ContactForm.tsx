@@ -22,6 +22,7 @@ interface ContactFormProps {
   };
   submitText: string;
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function ContactForm({
@@ -31,6 +32,7 @@ export default function ContactForm({
   consent,
   submitText,
   primaryColor,
+  $bgColor,
 }: ContactFormProps) {
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -132,7 +134,10 @@ export default function ContactForm({
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section
+      className="py-16"
+      style={{ backgroundColor: $bgColor || "#f9fafb" }}
+    >
       <div className="container mx-auto px-4">
         <form
           onSubmit={handleSubmit}

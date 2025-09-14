@@ -3,6 +3,7 @@ interface CtaProps {
   subtitle: string;
   anchor?: string;
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function Cta({
@@ -10,9 +11,14 @@ export default function Cta({
   subtitle,
   anchor,
   primaryColor,
+  $bgColor,
 }: CtaProps) {
   return (
-    <section className="py-16 bg-white" id={anchor}>
+    <section
+      className="py-16"
+      id={anchor}
+      style={{ backgroundColor: $bgColor || "white" }}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2

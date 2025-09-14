@@ -406,6 +406,43 @@ export interface ApiConfigConfig extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiFormLeadFormLead extends Struct.CollectionTypeSchema {
+  collectionName: 'form_leads';
+  info: {
+    displayName: 'FormLead';
+    pluralName: 'form-leads';
+    singularName: 'form-lead';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cidade: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    detalhes_operacao: Schema.Attribute.RichText;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::form-lead.form-lead'
+    > &
+      Schema.Attribute.Private;
+    nome: Schema.Attribute.String;
+    nome_empresa: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    qtd_colaboradores: Schema.Attribute.String;
+    qtd_filiais: Schema.Attribute.String;
+    telefone: Schema.Attribute.String;
+    tipo_transporte: Schema.Attribute.String;
+    trabalhou_fretado_transporte_funcionarios: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -916,6 +953,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::config.config': ApiConfigConfig;
+      'api::form-lead.form-lead': ApiFormLeadFormLead;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

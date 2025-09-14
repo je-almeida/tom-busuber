@@ -4,5 +4,8 @@ export const ROUTES = {
   admin: [{ name: "Admin Panel", path: "/admin" }],
 };
 
-export const STRAPI_PUBLIC_ROUTES = [{ path: "/config" }];
+export const STRAPI_PUBLIC_ROUTES = [
+  { path: "/config" },
+  { path: "/form-leads" },
+];
 export type StrapiPublicRoutes = (typeof STRAPI_PUBLIC_ROUTES)[number]["path"];

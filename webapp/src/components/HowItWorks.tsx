@@ -8,15 +8,20 @@ interface HowItWorksProps {
   title: string;
   steps: Step[];
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function HowItWorks({
   title,
   steps,
   primaryColor,
+  $bgColor,
 }: HowItWorksProps) {
   return (
-    <section className="py-16 bg-gray-50">
+    <section
+      className="py-16"
+      style={{ backgroundColor: $bgColor || "#f9fafb" }}
+    >
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">
