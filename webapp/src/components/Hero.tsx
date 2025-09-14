@@ -8,6 +8,7 @@ interface HeroProps {
   ctaLink: string;
   image: string;
   primaryColor: string;
+  $bgColor?: string;
 }
 
 export default function Hero({
@@ -17,12 +18,15 @@ export default function Hero({
   ctaLink,
   image,
   primaryColor,
+  $bgColor = "white",
 }: HeroProps) {
   return (
-    <section className="py-16 bg-white">
+    <section
+      className={`py-16`}
+      style={{ backgroundColor: $bgColor, color: "blue" }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Text Content */}
           <div className="space-y-6">
             <h1
               className="text-4xl lg:text-5xl font-bold leading-tight"
@@ -46,7 +50,6 @@ export default function Hero({
               </Link>
             </div>
           </div>
-
           {/* Image */}
           <div className="flex justify-center">
             <Image

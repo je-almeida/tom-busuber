@@ -12,18 +12,16 @@ import HowItWorks from "../../components/HowItWorks";
 import FinalCta from "../../components/FinalCta";
 import EsgCommitment from "../../components/EsgCommitment";
 import Footer from "../../components/Footer";
-import siteData from "../../data/site.json";
 import Stats from "../../components/Stats";
 import Faq from "../../components/FAQ";
-export default function SitePage() {
-  const { branding, ...data } = siteData;
-
+import { fetchSchema } from "../../actions/page-data/schema-bus";
+export default async function SitePage() {
+  const schema = await fetchSchema();
+  const { branding, ...data } = schema.bus_page_data;
+  console.log("Fetched schema:", schema);
   return (
     <main className="min-h-screen">
-      {/* Header */}
-      <Header logo={data.header.logo} />
-
-      {/* Hero Section */}
+      <Header logo={data.header.logo} $bgColor={branding.bgColor} />
       <Hero
         title={data.hero.title}
         subtitle={data.hero.subtitle}
@@ -31,12 +29,11 @@ export default function SitePage() {
         ctaLink={data.hero.ctaLink}
         image={data.hero.image}
         primaryColor={branding.primaryColor}
+        $bgColor={branding.bgColor}
       />
 
-      {/* Partners Section */}
-      <Partners partners={data.partners} />
+      <Partners partners={data.partners} $bgColor={branding.bgColor} />
 
-      {/* CTA Section */}
       <Cta
         title={data.cta1.title}
         subtitle={data.cta1.subtitle}
@@ -44,7 +41,6 @@ export default function SitePage() {
         primaryColor={branding.primaryColor}
       />
 
-      {/* Contact Form */}
       <ContactForm
         title={data.contactForm.title}
         subtitle={data.contactForm.subtitle}
@@ -54,7 +50,6 @@ export default function SitePage() {
         primaryColor={branding.primaryColor}
       />
 
-      {/* Problem Solution Section */}
       <ProblemSolution
         problems={data.problemSolution.problems}
         solution={data.problemSolution.solution}
@@ -63,7 +58,6 @@ export default function SitePage() {
         primaryColor={branding.primaryColor}
       />
 
-      {/* Solution Benefits */}
       <SolutionBenefits
         title={data.solutionBenefits.title}
         description={data.solutionBenefits.description}
@@ -72,40 +66,34 @@ export default function SitePage() {
         primaryColor={branding.primaryColor}
       />
 
-      {/* Tech Features */}
       <TechFeatures
         features={data.techFeatures}
         primaryColor={branding.primaryColor}
       />
 
-      {/* Benefits */}
       <Benefits
         title={data.benefits.title}
         items={data.benefits.items}
         primaryColor={branding.primaryColor}
       />
 
-      {/* Stats */}
       <Stats
         title={data.stats.title}
         metrics={data.stats.metrics}
         primaryColor={branding.primaryColor}
       />
 
-      {/* Testimonials */}
       <Testimonials
         title={data.testimonials.title}
         items={data.testimonials.items}
       />
 
-      {/* How It Works */}
       <HowItWorks
         title={data.howItWorks.title}
         steps={data.howItWorks.steps}
         primaryColor={branding.primaryColor}
       />
 
-      {/* Final CTA */}
       <FinalCta
         title={data.finalCta.title}
         description={data.finalCta.description}
@@ -115,7 +103,6 @@ export default function SitePage() {
         primaryColor={branding.primaryColor}
       />
 
-      {/* ESG Commitment */}
       <EsgCommitment
         title={data.esgCommitment.title}
         subtitle={data.esgCommitment.subtitle}
@@ -126,14 +113,12 @@ export default function SitePage() {
         primaryColor={branding.primaryColor}
       />
 
-      {/* FAQ */}
       <Faq
         title={data.faq.title}
         items={data.faq.items}
         primaryColor={branding.primaryColor}
       />
 
-      {/* Footer */}
       <Footer copyright={data.footer.copyright} />
     </main>
   );

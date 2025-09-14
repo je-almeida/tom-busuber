@@ -9,11 +9,15 @@ interface HeaderProps {
     width: number;
     height: number;
   };
+  $bgColor?: string;
 }
 
-export default function Header({ logo }: HeaderProps) {
+export default function Header({ logo, $bgColor }: HeaderProps) {
   return (
-    <header className="bg-white shadow-sm">
+    <header
+      className="shadow-sm"
+      style={{ backgroundColor: $bgColor || "white" }}
+    >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-center">
           <Link href={logo.link} className="flex items-center">
