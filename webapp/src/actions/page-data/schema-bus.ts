@@ -3,7 +3,9 @@ import { Strapi } from "../../utils/strapi";
 
 export async function fetchSchema() {
   try {
-    return await Strapi.public("config");
+    return await Strapi.public("config", {
+      cache: "no-store",
+    });
   } catch (error) {
     console.error("Error fetching schema:", error);
     return null;
