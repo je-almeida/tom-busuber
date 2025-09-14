@@ -14,37 +14,19 @@ import EsgCommitment from "../../components/EsgCommitment";
 import Footer from "../../components/Footer";
 import Stats from "../../components/Stats";
 import Faq from "../../components/FAQ";
-// import { fetchSchema } from "../../actions/page-data/schema-bus";
-import pagedata from "../../data/pagedata.json";
-import { sanitizeTwCls } from "../../utils/sanitizeTwCls";
+import { fetchSchema } from "../../actions/page-data/schema-bus";
 export default async function SitePage() {
-  // const schema = await fetchSchema().catch((error) => {
-  //   console.error("Error fetching schema:", error);
-  //   return null;
-  // });
-  const schema: any = pagedata;
+  const schema = await fetchSchema().catch((error) => {
+    console.error("Error fetching schema:", error);
+    return null;
+  });
+
   if (!schema) {
     return <div>Error loading page</div>;
   }
 
-  // find recursive in schema all $bgColor or bgColor, replace to $bgColor
-  // if searched bgColor apply sanitizeTwCls
-  const replaceBgColor = (obj: any): any => {
-    if (obj && typeof obj === "object") {
-      for (const key in obj) {
-        if (key === "bgColor") {
-          obj["$bgColor"] = sanitizeTwCls(obj[key]);
-          delete obj[key];
-        } else if (typeof obj[key] === "object") {
-          replaceBgColor(obj[key]);
-        }
-      }
-    }
-    return obj;
-  };
-
   const { branding, ...data } = schema.bus_page_data;
-  console.log("Fetched schema:", schema);
+
   return (
     <main className="min-h-screen">
       <Header {...data.header} />
