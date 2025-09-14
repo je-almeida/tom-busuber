@@ -32,7 +32,6 @@ export default function TechFeatures({
         {/* Features Grid */}
         <div className="space-y-16">
           {features.map((feature, index) => {
-            const isEven = index % 2 === 0;
             const isMultiOperadores =
               feature.title === "Gestão Multi-operadores";
             const isReportsIA = feature.title === "Reports IA";

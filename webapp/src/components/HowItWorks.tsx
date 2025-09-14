@@ -12,7 +12,6 @@ interface HowItWorksProps {
 }
 
 export default function HowItWorks({
-  title,
   steps,
   primaryColor,
   $bgColor,

@@ -1,4 +1,4 @@
-import { STRAPI_PUBLIC_ROUTES, StrapiPublicRoutes } from "../constants/routes";
+import { StrapiPublicRoutes } from "../constants/routes";
 
 export class Strapi {
   static async public(url: StrapiPublicRoutes, options: RequestInit = {}) {

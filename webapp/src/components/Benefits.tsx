@@ -13,12 +13,7 @@ interface BenefitsProps {
   $bgColor?: string;
 }
 
-export default function Benefits({
-  title,
-  items,
-  primaryColor,
-  $bgColor,
-}: BenefitsProps) {
+export default function Benefits({ title, items, $bgColor }: BenefitsProps) {
   return (
     <section
       className="py-16"

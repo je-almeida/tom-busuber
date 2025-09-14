@@ -10,12 +10,7 @@ interface StatsProps {
   $bgColor?: string;
 }
 
-export default function Stats({
-  title,
-  metrics,
-  primaryColor,
-  $bgColor,
-}: StatsProps) {
+export default function Stats({ metrics, primaryColor, $bgColor }: StatsProps) {
   return (
     <section
       className="py-16"

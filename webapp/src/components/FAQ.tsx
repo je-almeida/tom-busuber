@@ -14,12 +14,7 @@ interface FaqProps {
   $bgColor?: string;
 }
 
-export default function Faq({
-  title,
-  items,
-  primaryColor,
-  $bgColor,
-}: FaqProps) {
+export default function Faq({ items, primaryColor, $bgColor }: FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {

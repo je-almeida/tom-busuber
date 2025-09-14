@@ -1,0 +1,40 @@
+{
+  "apps": [
+    {
+      "name": "strapi",
+      "script": "npm",
+      "args": "start",
+      "cwd": "/app/strapi",
+      "env": {
+        "NODE_ENV": "production",
+        "HOST": "0.0.0.0",
+        "PORT": "1337"
+      },
+      "error_file": "/var/log/pm2/strapi-error.log",
+      "out_file": "/var/log/pm2/strapi-out.log",
+      "log_file": "/var/log/pm2/strapi.log",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": "1G"
+    },
+    {
+      "name": "nextjs",
+      "script": "npm",
+      "args": "start",
+      "cwd": "/app/webapp",
+      "env": {
+        "NODE_ENV": "production",
+        "HOSTNAME": "0.0.0.0",
+        "PORT": "3000"
+      },
+      "error_file": "/var/log/pm2/nextjs-error.log",
+      "out_file": "/var/log/pm2/nextjs-out.log",
+      "log_file": "/var/log/pm2/nextjs.log",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": "1G"
+    }
+  ]
+}

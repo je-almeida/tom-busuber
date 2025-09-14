@@ -18,7 +18,6 @@ interface EsgCommitmentProps {
 
 export default function EsgCommitment({
   title,
-  subtitle,
   certificationTitle,
   certificationDescription,
   certificationImage,

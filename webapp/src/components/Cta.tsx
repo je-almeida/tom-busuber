@@ -7,7 +7,6 @@ interface CtaProps {
 }
 
 export default function Cta({
-  title,
   subtitle,
   anchor,
   primaryColor,

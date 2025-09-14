@@ -47,7 +47,7 @@ export default function Testimonials({
 
                 {/* Quote Text */}
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </p>
 
                 {/* Company */}
