@@ -16,7 +16,13 @@ import Stats from "../../components/Stats";
 import Faq from "../../components/FAQ";
 import { fetchSchema } from "../../actions/page-data/schema-bus";
 export default async function SitePage() {
-  const schema = await fetchSchema();
+  const schema = await fetchSchema().catch((error) => {
+    console.error("Error fetching schema:", error);
+    return null;
+  });
+  if (!schema) {
+    return <div>Error loading page</div>;
+  }
   const { branding, ...data } = schema.bus_page_data;
   console.log("Fetched schema:", schema);
   return (
