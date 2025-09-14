@@ -1,0 +1,285 @@
+{
+  "branding": {
+    "companyName": "GOLFFOX",
+    "primaryColor": "#00bf6f",
+    "secondaryColor": "#666666"
+  },
+  "header": {
+    "logo": {
+      "src": "/img/logo-green-1.png",
+      "alt": "GOLFFOX Logo",
+      "link": "#",
+      "width": 150,
+      "height": 63
+    }
+  },
+  "hero": {
+    "title": "Solução Inteligente de Transporte para Seus Colaboradores",
+    "subtitle": "Oferecemos a solução perfeita para reduzir o custo do transporte e melhorar a experiência do seu time.",
+    "ctaText": "Fale com a gente",
+    "ctaLink": "#contacto",
+    "image": "/img/bus_banner (2)-1.png"
+  },
+  "partners": [
+    { "name": "Amazon", "logo": "/img/amazon.png" },
+    { "name": "Mercado Livre", "logo": "/img/mercado_livre.png" },
+    { "name": "JBS", "logo": "/img/JBS.png" },
+    { "name": "Casas Bahia", "logo": "/img/casas_bahia.png" },
+    { "name": "O Boticário", "logo": "/img/Boticario.png" },
+    { "name": "DASA", "logo": "/img/dasa-1.png" }
+  ],
+  "cta1": {
+    "title": "Pronto para transformar o transporte da sua empresa?",
+    "subtitle": "Não perca tempo com soluções ineficientes. Acesse agora e descubra como podemos otimizar o transporte para sua empresa.",
+    "anchor": "contacto"
+  },
+  "contactForm": {
+    "title": "Entre em Contato",
+    "subtitle": "Preencha o formulário e descubra como otimizar o transporte da sua empresa",
+    "fields": [
+      { "name": "nome", "label": "Nome", "type": "text", "required": true },
+      {
+        "name": "email",
+        "label": "E-mail Corporativo",
+        "type": "email",
+        "required": true,
+        "placeholder": "nome@suaempresa.com.br"
+      },
+      {
+        "name": "telefone",
+        "label": "Telefone Corporativo",
+        "type": "tel",
+        "required": false
+      },
+      {
+        "name": "empresa",
+        "label": "Nome da Empresa",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "colaboradores",
+        "label": "Nº de Colaboradores",
+        "type": "select",
+        "required": true,
+        "options": [
+          "De 1 a 50",
+          "De 51 a 150",
+          "De 151 a 300",
+          "De 301 a 1.000",
+          "Mais de 1.000"
+        ]
+      },
+      {
+        "name": "cidade",
+        "label": "Cidade",
+        "type": "text",
+        "required": true,
+        "helper": "Preencha com uma ou mais cidades, dependendo da sua necessidade"
+      },
+      {
+        "name": "tipo_transporte",
+        "label": "Que tipo de transporte que você procura?",
+        "type": "select",
+        "required": true,
+        "options": ["Fretado Contínuo", "Tenho um evento"]
+      },
+      {
+        "name": "filiais",
+        "label": "Quantas filiais possui sua empresa?",
+        "type": "select",
+        "required": true,
+        "options": ["1", "2-5", "6-10", "+10"]
+      },
+      {
+        "name": "experiencia_fretados",
+        "label": "Trabalha ou já trabalhou com fretados no transporte de funcionários?",
+        "type": "select",
+        "required": true,
+        "options": ["Sim", "Não"]
+      },
+      {
+        "name": "detalhes",
+        "label": "Gostaria de adicionar mais algum detalhe importante sobre a operação?",
+        "type": "textarea",
+        "required": false
+      }
+    ],
+    "consent": {
+      "text": "Desejo receber informações comerciais sobre os serviços e produtos e novidades da GOLFFOX TECHNOLOGIES, S.L",
+      "required": true
+    },
+    "submitText": "Enviar"
+  },
+  "problemSolution": {
+    "problems": [
+      "Custo elevado",
+      "Falta de flexibilidade",
+      "Insatisfação dos colaboradores"
+    ],
+    "solution": "A GOLFFOX tem a solução.",
+    "description": "Gerenciar o transporte de colaboradores pode ser um grande desafio. O custo do vale-transporte está aumentando, o transporte público é ineficiente e os problemas de retenção de talentos se agravam. Sua empresa enfrenta esses problemas todos os dias?",
+    "image": "/img/app_colab.png"
+  },
+  "solutionBenefits": {
+    "title": "Reduza custos, aumente a produtividade e melhore a experiência do seu time.",
+    "description": "Com a GOLFFOX, você oferece um transporte corporativo eficiente, inteligente e sustentável para seus colaboradores. Nossa plataforma otimiza rotas, reduz os custos operacionais e ainda melhora a qualidade de vida do seu time.",
+    "image": "/img/mapa-optimizar-rotas-web-3.png",
+    "ctaText": "Descubra a Solução"
+  },
+  "techFeatures": [
+    {
+      "title": "Gestão Multi-operadores",
+      "subtitle": "Mais opções, menos esforço",
+      "description": "Mais de 150 parceiros para garantir o melhor serviço.",
+      "image": "/img/Imagem5.svg",
+      "bgColor": "#e3f4f8"
+    },
+    {
+      "title": "Gestão Multi-Site",
+      "subtitle": "Tudo em um só lugar",
+      "description": "Controle todos os programas de transporte da sua empresa num único lugar.",
+      "image": "/img/image-png-May-09-2025-06-31-23-7341-PM.png",
+      "bgColor": "#e6feef"
+    },
+    {
+      "title": "Reports IA",
+      "subtitle": "Dados que impulsionam decisões",
+      "description": "Acesse relatórios completos com insights gerados por inteligência artificial. Monitore o desempenho, identifique oportunidades e otimize a operação em tempo real.",
+      "image": "/img/image-png-May-09-2025-06-41-46-0693-PM.png",
+      "bgColor": "#fcf2e2"
+    },
+    {
+      "title": "Rotas Otimizadas",
+      "subtitle": "Poupe custos e tempo",
+      "description": "Definimos as melhores rotas para o transporte de colaboradores, otimizando tempo e custos.",
+      "image": "/img/image-png-May-09-2025-06-45-33-1338-PM.png",
+      "bgColor": "#d5fff2"
+    }
+  ],
+  "benefits": {
+    "title": "Economia, produtividade e bem-estar para seus colaboradores",
+    "items": [
+      {
+        "icon": "/img/redução de custos.png",
+        "title": "Redução de custos",
+        "description": "Economize até 40% em comparação com programas internos de transporte."
+      },
+      {
+        "icon": "/img/sustentabilidade.png",
+        "title": "Sustentabilidade",
+        "description": "Menos emissões, menos trânsito, e mais responsabilidade social para sua empresa."
+      },
+      {
+        "icon": "/img/talentos.png",
+        "title": "Retenção de talentos",
+        "description": "Ofereça um benefício valorizado por seus colaboradores e futuros talentos."
+      },
+      {
+        "icon": "/img/bulb_scratch.png",
+        "title": "Flexibilidade e controle",
+        "description": "Tenha visibilidade total sobre rotas e ocupação com relatórios detalhados com IA."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Resultados que falam por si",
+    "metrics": [
+      { "number": "+50", "label": "Cidades em 8 países" },
+      { "number": "+80M", "label": "Passageiros" },
+      { "number": "+110", "label": "Clientes" },
+      { "number": "+1.6K", "label": "Rotas diárias" }
+    ]
+  },
+  "testimonials": {
+    "title": "Histórias reais, Resultados reais",
+    "items": [
+      {
+        "quote": "Não só reduzimos os nossos custos em 20% como também melhoramos a segurança dos nossos colaboradores.",
+        "company": "BANCO MILLENNIUM BCP"
+      },
+      {
+        "quote": "A GOLFFOX é muito competitiva em termos de custos e flexibilidade de rotas porque podemos usar as rotas de outras empresas assim como outras empresas usam as nossas.",
+        "company": "COGNIZANT"
+      },
+      {
+        "quote": "Com a GOLFFOX conseguimos melhorar a mobilidade dos nossos colaboradores e também fazê-lo de forma sustentável.",
+        "company": "FICOSA"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Veja como é fácil e rápido começar!",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Soluções personalizadas",
+        "description": "Analisamos as necessidades da sua empresa e criamos rotas sob medida."
+      },
+      {
+        "number": "2",
+        "title": "Implementação rápida",
+        "description": "Treinamos o Operador e colocamos tudo a funcionar sem complicações."
+      },
+      {
+        "number": "3",
+        "title": "Gestão contínua",
+        "description": "Monitorizamos o serviço em tempo real e ajustamos conforme necessário."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Pronto para otimizar o transporte da sua empresa?",
+    "description": "Fale com nossos especialistas e descubra como transformar o deslocamento dos seus colaboradores em uma solução mais eficiente, econômica e estratégica.",
+    "image": "/img/telemóvel_golffox-2.png",
+    "ctaText": "Quero saber mais",
+    "ctaLink": "#contacto"
+  },
+  "esgCommitment": {
+    "title": "Nosso Compromisso",
+    "subtitle": "Seu melhor aliado para atingir suas metas ESG",
+    "certificationTitle": "Provedor Certificado ESG",
+    "certificationDescription": "Desempenho ESG certificado pela Plataforma EcoVadis",
+    "certificationImage": "/img/image-png-Apr-11-2025-05-34-11-7166-PM.png",
+    "logos": [
+      { "name": "EPA", "image": "/img/2560px-EPA_logo.svg.png" },
+      {
+        "name": "Puget Sound",
+        "image": "/img/Puget+Sound+Clean+Air+Energy+logo.png"
+      },
+      { "name": "California ESG", "image": "/img/california_esg.png" },
+      {
+        "name": "Texas Commission",
+        "image": "/img/Texas_Commission_on_Environmental_Quality.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas Frequentes (FAQ)",
+    "items": [
+      {
+        "question": "Quem pode contratar o serviço de transporte de pessoal GOLFFOX?",
+        "answer": "O GOLFFOX é a solução ideal para empresas de todos os portes, parques industriais ou qualquer instituição que necessite de uma solução de transporte contínua de pessoas."
+      },
+      {
+        "question": "Como a GOLFFOX reduz os custos de transporte?",
+        "answer": "A GOLFFOX é especialista em analisar suas necessidades de transporte. Através de um formato simples, a GOLFFOX coleta informações sobre sua operação e as traduz em rotas otimizadas, garantindo o maior percentual de ocupação dos veículos para que seus colaboradores tenham um transporte eficiente, confortável e seguro.\n\nIniciada a operação, nossa equipe de inteligência em transportes proporá ações para a melhoria contínua do serviço."
+      },
+      {
+        "question": "Quais serviços inclui o transporte de funcionários para empresas?",
+        "answer": "O GOLFFOX oferece uma solução completa com otimização contínua de rotas e ocupação, rastreamento de veículos em tempo real e controle de embarque com QR Code através de um app.\n\nAlém disso, toda a gestão diária de passageiros e rotas é realizada por nós, com atendimento 24 horas por dia, 7 dias por semana, sem custo adicional."
+      },
+      {
+        "question": "É possível contratar o GOLFFOX para serviços específicos como eventos e passeios?",
+        "answer": "Não. Atualmente a GOLFFOX atende apenas demandas contínuas de transporte para empresas."
+      },
+      {
+        "question": "Como a GOLFFOX pode me ajudar com minha estratégia de sustentabilidade?",
+        "answer": "Todas as nossas operações visam reduzir significativamente a pegada de carbono representada pelo deslocamento para o trabalho. As nossas propostas de otimização e eficiência no serviço são avaliadas para aumentar a ocupação dos veículos, reduzir a quilometragem e, consequentemente, as emissões de CO2.\n\nTemos um programa de compensação que permite às empresas incluir nos seus resultados as toneladas de CO2 poupadas no serviço de transporte."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 GOLFFOX All Rights Reserved."
+  }
+}
