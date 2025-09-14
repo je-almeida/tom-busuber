@@ -14,130 +14,83 @@ import EsgCommitment from "../../components/EsgCommitment";
 import Footer from "../../components/Footer";
 import Stats from "../../components/Stats";
 import Faq from "../../components/FAQ";
-import { fetchSchema } from "../../actions/page-data/schema-bus";
+// import { fetchSchema } from "../../actions/page-data/schema-bus";
+import pagedata from "../../data/pagedata.json";
+import { sanitizeTwCls } from "../../utils/sanitizeTwCls";
 export default async function SitePage() {
-  const schema = await fetchSchema().catch((error) => {
-    console.error("Error fetching schema:", error);
-    return null;
-  });
+  // const schema = await fetchSchema().catch((error) => {
+  //   console.error("Error fetching schema:", error);
+  //   return null;
+  // });
+  const schema: any = pagedata;
   if (!schema) {
     return <div>Error loading page</div>;
   }
+
+  // find recursive in schema all $bgColor or bgColor, replace to $bgColor
+  // if searched bgColor apply sanitizeTwCls
+  const replaceBgColor = (obj: any): any => {
+    if (obj && typeof obj === "object") {
+      for (const key in obj) {
+        if (key === "bgColor") {
+          obj["$bgColor"] = sanitizeTwCls(obj[key]);
+          delete obj[key];
+        } else if (typeof obj[key] === "object") {
+          replaceBgColor(obj[key]);
+        }
+      }
+    }
+    return obj;
+  };
+
   const { branding, ...data } = schema.bus_page_data;
   console.log("Fetched schema:", schema);
   return (
     <main className="min-h-screen">
-      <Header logo={data.header.logo} $bgColor={branding.bgColor} />
-      <Hero
-        title={data.hero.title}
-        subtitle={data.hero.subtitle}
-        ctaText={data.hero.ctaText}
-        ctaLink={data.hero.ctaLink}
-        image={data.hero.image}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
-      />
+      <Header {...data.header} />
 
-      <Partners partners={data.partners} $bgColor={branding.bgColor} />
+      <Hero {...data.hero} />
 
-      <Cta
-        title={data.cta1.title}
-        subtitle={data.cta1.subtitle}
-        anchor={data.cta1.anchor}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
-      />
+      <Partners {...data.partners} />
+
+      <Cta {...data.cta1} />
 
       <ContactForm
-        title={data.contactForm.title}
-        subtitle={data.contactForm.subtitle}
-        fields={data.contactForm.fields}
-        consent={data.contactForm.consent}
-        submitText={data.contactForm.submitText}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
+        {...data.contactForm}
+        primaryColor={branding?.primaryColor}
+        secondaryColor={branding?.secondaryColor}
       />
 
       <ProblemSolution
-        problems={data.problemSolution.problems}
-        solution={data.problemSolution.solution}
-        description={data.problemSolution.description}
-        image={data.problemSolution.image}
+        {...data.problemSolution}
         primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
       />
 
       <SolutionBenefits
-        title={data.solutionBenefits.title}
-        description={data.solutionBenefits.description}
-        image={data.solutionBenefits.image}
-        ctaText={data.solutionBenefits.ctaText}
+        {...data.solutionBenefits}
         primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
       />
 
-      <TechFeatures
-        features={data.techFeatures}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
-      />
+      <TechFeatures {...data.techFeatures} />
 
-      <Benefits
-        title={data.benefits.title}
-        items={data.benefits.items}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
-      />
+      <Benefits {...data.benefits} primaryColor={branding.primaryColor} />
 
-      <Stats
-        title={data.stats.title}
-        metrics={data.stats.metrics}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
-      />
+      <Stats {...data.stats} primaryColor={branding.primaryColor} />
 
-      <Testimonials
-        title={data.testimonials.title}
-        items={data.testimonials.items}
-        $bgColor={branding.bgColor}
-      />
+      <Testimonials {...data.testimonials} />
 
-      <HowItWorks
-        title={data.howItWorks.title}
-        steps={data.howItWorks.steps}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
-      />
+      <HowItWorks {...data.howItWorks} primaryColor={branding.primaryColor} />
 
-      <FinalCta
-        title={data.finalCta.title}
-        description={data.finalCta.description}
-        image={data.finalCta.image}
-        ctaText={data.finalCta.ctaText}
-        ctaLink={data.finalCta.ctaLink}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
-      />
+      <FinalCta {...data.finalCta} primaryColor={branding.primaryColor} />
 
       <EsgCommitment
-        title={data.esgCommitment.title}
-        subtitle={data.esgCommitment.subtitle}
-        certificationTitle={data.esgCommitment.certificationTitle}
-        certificationDescription={data.esgCommitment.certificationDescription}
-        certificationImage={data.esgCommitment.certificationImage}
-        logos={data.esgCommitment.logos}
+        {...data.esgCommitment}
         primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
       />
 
-      <Faq
-        title={data.faq.title}
-        items={data.faq.items}
-        primaryColor={branding.primaryColor}
-        $bgColor={branding.bgColor}
-      />
+      <Faq {...data.faq} primaryColor={branding.primaryColor} />
 
-      <Footer copyright={data.footer.copyright} $bgColor={branding.bgColor} />
+      <Footer {...data.footer} />
     </main>
   );
 }

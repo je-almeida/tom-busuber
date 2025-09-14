@@ -9,18 +9,17 @@ interface TechFeature {
 }
 
 interface TechFeaturesProps {
-  features: TechFeature[];
+  active?: boolean;
+  items: TechFeature[];
   primaryColor: string;
   $bgColor?: string;
 }
 
-export default function TechFeatures({
-  features,
-  primaryColor,
-  $bgColor,
-}: TechFeaturesProps) {
+export default function TechFeatures(data: TechFeaturesProps) {
+  const { active, items, primaryColor, $bgColor } = data;
+  if (active === false) return null;
   return (
-    <section className="py-16" style={{ backgroundColor: $bgColor || "white" }}>
+    <section className="py-16" style={{ background: $bgColor || "white" }}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -31,14 +30,14 @@ export default function TechFeatures({
 
         {/* Features Grid */}
         <div className="space-y-16">
-          {features.map((feature, index) => {
+          {items.map((feature, index) => {
             const isMultiOperadores =
               feature.title === "Gestão Multi-operadores";
             const isReportsIA = feature.title === "Reports IA";
 
             // Multi-operadores and Multi-Site in same row
             if (isMultiOperadores) {
-              const multiSiteFeature = features.find(
+              const multiSiteFeature = items.find(
                 (f) => f.title === "Gestão Multi-Site"
               );
               return (
@@ -118,7 +117,7 @@ export default function TechFeatures({
 
             // Reports IA and Rotas Otimizadas in same row
             if (isReportsIA) {
-              const rotasFeature = features.find(
+              const rotasFeature = items.find(
                 (f) => f.title === "Rotas Otimizadas"
               );
               return (

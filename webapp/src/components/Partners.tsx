@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { sanitizeTwCls } from "../utils/sanitizeTwCls";
 
 interface Partner {
   name: string;
@@ -7,18 +8,18 @@ interface Partner {
 
 interface PartnersProps {
   $bgColor?: string;
-  partners: Partner[];
+  items: Partner[];
+  active?: boolean;
 }
 
-export default function Partners({ partners, $bgColor }: PartnersProps) {
+export default function Partners(data: PartnersProps) {
+  const { items, $bgColor, active } = data;
+  if (active === false) return null;
   return (
-    <section
-      className="py-12 bg-gray-50"
-      style={{ backgroundColor: $bgColor || "white" }}
-    >
+    <section className="py-12" style={{ background: $bgColor }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {partners.map((partner, index) => (
+          {items.map((partner, index) => (
             <div key={index} className="flex justify-center items-center">
               <Image
                 src={partner.logo}

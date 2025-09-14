@@ -9,24 +9,26 @@ interface FaqItem {
 
 interface FaqProps {
   title: string;
+  active?: boolean;
   items: FaqItem[];
   primaryColor: string;
   $bgColor?: string;
 }
 
-export default function Faq({ items, primaryColor, $bgColor }: FaqProps) {
+export default function Faq(data: FaqProps) {
+  const { active, title, items, primaryColor, $bgColor } = data;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  if (active === false) return null;
   return (
     <section
       className="py-16"
       style={{
-        backgroundColor: $bgColor || "#f9fafb",
-        backgroundImage: "url(/img/bg-pattern.png)",
+        background: $bgColor,
       }}
     >
       <div className="container mx-auto px-4">
@@ -34,7 +36,7 @@ export default function Faq({ items, primaryColor, $bgColor }: FaqProps) {
           {/* Title */}
           <div className="lg:col-span-4 flex items-start">
             <h2 className="text-2xl lg:text-3xl font-bold">
-              Perguntas Frequentes{" "}
+              {title}
               <span style={{ color: primaryColor }}>(FAQ)</span>
             </h2>
           </div>

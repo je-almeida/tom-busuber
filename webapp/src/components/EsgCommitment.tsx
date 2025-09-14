@@ -12,24 +12,30 @@ interface EsgCommitmentProps {
   certificationDescription: string;
   certificationImage: string;
   logos: Logo[];
+  logoRight: string;
   primaryColor: string;
   $bgColor?: string;
+  active?: boolean;
 }
 
-export default function EsgCommitment({
-  title,
-  certificationTitle,
-  certificationDescription,
-  certificationImage,
-  logos,
-  primaryColor,
-  $bgColor,
-}: EsgCommitmentProps) {
+export default function EsgCommitment(data: EsgCommitmentProps) {
+  const {
+    title,
+    subtitle,
+    logoRight,
+    certificationTitle,
+    certificationDescription,
+    certificationImage,
+    logos,
+    primaryColor,
+    $bgColor,
+    active,
+  } = data;
+
+  if (active === false) return null;
+
   return (
-    <section
-      className="py-16"
-      style={{ backgroundColor: $bgColor || "#f9fafb" }}
-    >
+    <section className="py-16" style={{ background: $bgColor }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
@@ -48,8 +54,8 @@ export default function EsgCommitment({
             {/* EPA Logo */}
             <div className="text-center">
               <Image
-                src="/img/2560px-EPA_logo.svg.png"
-                alt="EPA Logo"
+                src={logoRight}
+                alt="logo"
                 width={101}
                 height={31}
                 className="mx-auto mb-2"

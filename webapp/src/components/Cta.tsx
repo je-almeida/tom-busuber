@@ -3,21 +3,16 @@ interface CtaProps {
   subtitle: string;
   anchor?: string;
   primaryColor: string;
+  secondaryColor: string;
   $bgColor?: string;
+  active?: boolean;
 }
 
-export default function Cta({
-  subtitle,
-  anchor,
-  primaryColor,
-  $bgColor,
-}: CtaProps) {
+export default function Cta(data: CtaProps) {
+  const { title, subtitle, anchor, primaryColor, $bgColor, active } = data;
+  if (active === false) return null;
   return (
-    <section
-      className="py-16"
-      id={anchor}
-      style={{ backgroundColor: $bgColor || "white" }}
-    >
+    <section className="py-16" id={anchor} style={{ background: $bgColor }}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2
@@ -30,7 +25,7 @@ export default function Cta({
             </span>{" "}
             da sua empresa?
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">{subtitle}</p>
+          <p className="text-lg leading-relaxed">{subtitle}</p>
         </div>
       </div>
     </section>

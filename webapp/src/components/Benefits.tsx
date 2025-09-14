@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { sanitizeTwCls } from "../utils/sanitizeTwCls";
+import { twMerge } from "tw-merge";
 
 interface Benefit {
   icon: string;
@@ -8,17 +10,21 @@ interface Benefit {
 
 interface BenefitsProps {
   title: string;
+  active?: boolean;
   items: Benefit[];
   primaryColor: string;
   $bgColor?: string;
 }
 
-export default function Benefits({ title, items, $bgColor }: BenefitsProps) {
+export default function Benefits(data: BenefitsProps) {
+  const { active, title, items, $bgColor } = data;
+
+  if (active === false) {
+    return null;
+  }
+
   return (
-    <section
-      className="py-16"
-      style={{ backgroundColor: $bgColor || "#f9fafb" }}
-    >
+    <section className={twMerge(`py-16`)} style={{ background: $bgColor }}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -26,14 +32,10 @@ export default function Benefits({ title, items, $bgColor }: BenefitsProps) {
             {title}
           </h2>
         </div>
-
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {items.map((benefit, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-3xl p-8 shadow-sm border"
-            >
+            <div key={index} className="rounded-3xl p-8 shadow-sm border">
               <div className="text-center space-y-4">
                 {/* Icon */}
                 <div className="mb-6">

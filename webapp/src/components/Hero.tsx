@@ -9,6 +9,7 @@ interface HeroProps {
   image: string;
   primaryColor: string;
   $bgColor?: string;
+  active?: boolean;
 }
 
 export default function Hero({
@@ -19,11 +20,12 @@ export default function Hero({
   image,
   primaryColor,
   $bgColor = "white",
+  active,
 }: HeroProps) {
   return (
     <section
       className={`py-16`}
-      style={{ backgroundColor: $bgColor, color: "blue" }}
+      style={{ background: $bgColor, color: "blue" }}
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

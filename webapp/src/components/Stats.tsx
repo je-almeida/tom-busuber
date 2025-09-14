@@ -8,14 +8,21 @@ interface StatsProps {
   metrics: Metric[];
   primaryColor: string;
   $bgColor?: string;
+  active?: boolean;
 }
 
-export default function Stats({ metrics, primaryColor, $bgColor }: StatsProps) {
+export default function Stats({
+  metrics,
+  primaryColor,
+  $bgColor,
+  active,
+}: StatsProps) {
+  if (active === false) return null;
   return (
     <section
       className="py-16"
       style={{
-        background: $bgColor || "linear-gradient(to right, #f9fafb, #f3f4f6)",
+        background: $bgColor,
       }}
     >
       <div className="container mx-auto px-4">

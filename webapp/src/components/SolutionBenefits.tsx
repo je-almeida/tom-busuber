@@ -8,6 +8,7 @@ interface SolutionBenefitsProps {
   ctaText: string;
   primaryColor: string;
   $bgColor?: string;
+  active?: boolean;
 }
 
 export default function SolutionBenefits({
@@ -17,12 +18,11 @@ export default function SolutionBenefits({
   ctaText,
   primaryColor,
   $bgColor,
+  active,
 }: SolutionBenefitsProps) {
+  if (active === false) return null;
   return (
-    <section
-      className="py-16"
-      style={{ backgroundColor: $bgColor || "#f9fafb" }}
-    >
+    <section className="py-16" style={{ background: $bgColor }}>
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto space-y-8">
           {/* Title */}

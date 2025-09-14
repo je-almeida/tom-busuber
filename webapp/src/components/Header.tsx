@@ -10,14 +10,13 @@ interface HeaderProps {
     height: number;
   };
   $bgColor?: string;
+  active?: boolean;
 }
 
-export default function Header({ logo, $bgColor }: HeaderProps) {
+export default function Header({ logo, $bgColor, active }: HeaderProps) {
+  if (active === false) return null;
   return (
-    <header
-      className="shadow-sm"
-      style={{ backgroundColor: $bgColor || "white" }}
-    >
+    <header className="shadow-sm" style={{ background: $bgColor }}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-center">
           <Link href={logo.link} className="flex items-center">

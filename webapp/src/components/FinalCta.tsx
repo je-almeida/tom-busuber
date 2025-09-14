@@ -9,25 +9,25 @@ interface FinalCtaProps {
   ctaLink: string;
   primaryColor: string;
   $bgColor?: string;
+  active?: boolean;
 }
 
-export default function FinalCta({
-  title,
-  description,
-  image,
-  ctaText,
-  ctaLink,
-  primaryColor,
-  $bgColor,
-}: FinalCtaProps) {
+export default function FinalCta(data: FinalCtaProps) {
+  const {
+    title,
+    description,
+    image,
+    ctaText,
+    ctaLink,
+    primaryColor,
+    $bgColor,
+    active,
+  } = data;
+  if (active === false) return null;
   return (
-    <section
-      className="py-16"
-      style={{ backgroundColor: $bgColor || "#f3f4f6" }}
-    >
+    <section className="py-16" style={{ background: $bgColor }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Image */}
           <div className="lg:col-span-4 flex justify-center">
             <Image
               src={image}
@@ -37,7 +37,6 @@ export default function FinalCta({
               className="max-w-full h-auto"
             />
           </div>
-
           {/* Content */}
           <div className="lg:col-span-8 space-y-6">
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight">

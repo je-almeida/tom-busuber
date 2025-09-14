@@ -13,6 +13,7 @@ interface FormField {
 }
 
 interface ContactFormProps {
+  active?: boolean;
   title: string;
   subtitle: string;
   fields: FormField[];
@@ -22,18 +23,22 @@ interface ContactFormProps {
   };
   submitText: string;
   primaryColor: string;
+  secondaryColor: string;
   $bgColor?: string;
 }
 
-export default function ContactForm({
-  title,
-  subtitle,
-  fields,
-  consent,
-  submitText,
-  primaryColor,
-  $bgColor,
-}: ContactFormProps) {
+export default function ContactForm(data: ContactFormProps) {
+  const {
+    active,
+    title,
+    subtitle,
+    fields,
+    consent,
+    submitText,
+    primaryColor,
+    secondaryColor,
+    $bgColor,
+  } = data;
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -133,11 +138,12 @@ export default function ContactForm({
     }
   };
 
+  if (active === false) {
+    return null;
+  }
+
   return (
-    <section
-      className="py-16"
-      style={{ backgroundColor: $bgColor || "#f9fafb" }}
-    >
+    <section className="py-16" style={{ background: $bgColor }}>
       <div className="container mx-auto px-4">
         <form
           onSubmit={handleSubmit}
@@ -253,7 +259,7 @@ export default function ContactForm({
                 type="submit"
                 disabled={isSubmitting}
                 className="px-10 py-4 text-white font-bold rounded-lg text-lg transition-colors hover:opacity-90 disabled:opacity-50"
-                style={{ backgroundColor: primaryColor }}
+                style={{ backgroundColor: primaryColor, color: secondaryColor }}
               >
                 {isSubmitting ? "Enviando..." : submitText}
               </button>

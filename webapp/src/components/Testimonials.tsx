@@ -9,15 +9,19 @@ interface TestimonialsProps {
   title: string;
   items: Testimonial[];
   $bgColor?: string;
+  active?: boolean;
 }
 
 export default function Testimonials({
   title,
   items,
   $bgColor,
+  active,
 }: TestimonialsProps) {
+  if (active === false) return null;
+
   return (
-    <section className="py-16" style={{ backgroundColor: $bgColor || "white" }}>
+    <section className="py-16" style={{ background: $bgColor }}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">
