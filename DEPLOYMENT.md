@@ -10,7 +10,7 @@ Este projeto contém duas aplicações:
 ### Configuração do App
 
 1. **Tipo**: Docker
-2. **Source**: GitHub Repository 
+2. **Source**: GitHub Repository
 3. **Build Path**: `/` (root do repositório)
 4. **Dockerfile Path**: `./Dockerfile` (relativo à raiz)
 5. **Build Context**: `.` (root do repositório)
@@ -18,6 +18,7 @@ Este projeto contém duas aplicações:
 ### ⚠️ Estrutura de Arquivos Importante
 
 O Dockerfile está na **raiz** do projeto e espera esta estrutura:
+
 ```
 /
 ├── Dockerfile              # ← Dockerfile principal
@@ -147,21 +148,26 @@ pm2 delete all
 ## Troubleshooting
 
 ### Error: "Dockerfile not found"
+
 - Verificar se o **Build Context** está setado como `.` (root)
 - Confirmar que o **Dockerfile Path** é `./Dockerfile`
 - O Dockerfile deve estar na raiz do repositório
 
-### Error: "npm ci failed" 
+### Error: "npm ci failed"
+
 - Problema com dependências ou package-lock.json
 - O build irá instalar todas as dependências necessárias
 - Verificar se os arquivos package.json estão corretos
 
 ### Portas não acessíveis
+
 - Confirmar que as portas 3000 e 1337 estão expostas no Easypanel
 - Verificar se o health check está configurado na porta 3000
 
 ### Logs PM2
+
 Para verificar logs dos processos:
+
 ```bash
 # Dentro do container
 pm2 logs
