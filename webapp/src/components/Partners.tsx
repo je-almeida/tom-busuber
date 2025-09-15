@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { sanitizeTwCls } from "../utils/sanitizeTwCls";
 
 interface Partner {
   name: string;

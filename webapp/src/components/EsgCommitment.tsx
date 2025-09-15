@@ -21,7 +21,6 @@ interface EsgCommitmentProps {
 export default function EsgCommitment(data: EsgCommitmentProps) {
   const {
     title,
-    subtitle,
     logoRight,
     certificationTitle,
     certificationDescription,

@@ -22,6 +22,7 @@ export default function Hero({
   $bgColor = "white",
   active,
 }: HeroProps) {
+  if (active === false) return null;
   return (
     <section
       className={`py-16`}

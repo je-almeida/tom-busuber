@@ -9,7 +9,7 @@ interface CtaProps {
 }
 
 export default function Cta(data: CtaProps) {
-  const { title, subtitle, anchor, primaryColor, $bgColor, active } = data;
+  const { subtitle, anchor, primaryColor, $bgColor, active } = data;
   if (active === false) return null;
   return (
     <section className="py-16" id={anchor} style={{ background: $bgColor }}>
