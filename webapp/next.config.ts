@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "sv.golffox.com.br",
+        hostname: "api.golffox.com.br",
         pathname: "/uploads/**",
       },
       {
