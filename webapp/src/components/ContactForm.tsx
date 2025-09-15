@@ -156,7 +156,7 @@ export default function ContactForm(data: ContactFormProps) {
           </div>
 
           {/* Form Fields */}
-          <div className="space-y-6">
+          <div className="space-y-6" id="contato">
             {fields.map((field, index) => {
               // Check if this field should be in a flex row with the next field
               const isEmailField = field.name === "email";
