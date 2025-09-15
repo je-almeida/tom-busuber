@@ -33,13 +33,13 @@ export default function Hero({
           <div className="space-y-6">
             <h1
               className="text-4xl lg:text-5xl font-bold leading-tight"
-              style={{ lineHeight: "0.8" }}
+              style={{ lineHeight: "0.8", color: "white" }}
             >
               {title}
             </h1>
             <p
               className="text-xl leading-relaxed"
-              style={{ color: primaryColor, lineHeight: "1.15" }}
+              style={{ color: "white", lineHeight: "1.15" }}
             >
               {subtitle}
             </p>
