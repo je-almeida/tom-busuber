@@ -52,7 +52,7 @@ export default function SolutionBenefits({
           {/* CTA Button */}
           <div className="pt-4">
             <Link
-              href="#contacto"
+              href="#contato"
               className="inline-block px-8 py-4 text-white font-semibold rounded-lg transition-colors hover:opacity-90"
               style={{ backgroundColor: primaryColor }}
             >
