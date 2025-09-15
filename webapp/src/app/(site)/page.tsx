@@ -34,7 +34,7 @@ export default async function SitePage() {
     <main className="min-h-screen">
       <Header {...data.header} />
 
-      <Hero {...data.hero} />
+      <Hero {...data.hero} primaryColor={branding?.primaryColor} />
 
       <Partners {...data.partners} />
 
