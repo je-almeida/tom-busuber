@@ -1,14 +1,14 @@
 {
   "bus_page_data": {
     "branding": {
-      "$bgColor": "white",
       "companyName": "GOLFFOX",
       "primaryColor": "gray",
       "secondaryColor": "orange"
     },
     "header": {
-      "active": true,
       "$bgColor": "linear-gradient(to right, rgb(255, 102, 0), rgb(255, 255, 255))",
+
+      "active": true,
       "logo": {
         "src": "https://busuber-api.n3zvwn.easypanel.host/uploads/logo_green_1_1_2a847b3236.png",
         "alt": "GOLFFOX Logo",
@@ -19,7 +19,6 @@
     },
     "hero": {
       "active": true,
-      "$bgColor": "linear-gradient(to right, rgb(255, 102, 0), rgb(255, 255, 255))",
       "title": "Solução Inteligente de Transporte para Seus Colaboradores",
       "subtitle": "Oferecemos a solução perfeita para reduzir o custo do transporte e melhorar a experiência do seu time.",
       "ctaText": "Fale com a gente",
@@ -28,7 +27,6 @@
     },
     "partners": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "items": [
         {
@@ -59,7 +57,6 @@
     },
     "cta1": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "title": "Pronto para transformar o transporte da sua empresa?",
       "subtitle": "Não perca tempo com soluções ineficientes. Acesse agora e descubra como podemos otimizar o transporte para sua empresa.",
@@ -67,7 +64,6 @@
     },
     "contactForm": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "title": "Entre em Contato",
       "subtitle": "Preencha o formulário e descubra como otimizar o transporte da sua empresa",
@@ -153,7 +149,6 @@
     },
     "problemSolution": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
       "problems": [
         "Custo elevado",
         "Falta de flexibilidade",
@@ -165,7 +160,6 @@
     },
     "solutionBenefits": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
       "title": "Reduza custos, aumente a produtividade e melhore a experiência do seu time.",
       "description": "Com a GOLFFOX, você oferece um transporte corporativo eficiente, inteligente e sustentável para seus colaboradores. Nossa plataforma otimiza rotas, reduz os custos operacionais e ainda melhora a qualidade de vida do seu time.",
       "image": "/img/mapa-optimizar-rotas-web-3.png",
@@ -173,41 +167,35 @@
     },
     "techFeatures": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
       "items": [
         {
           "title": "Gestão Multi-operadores",
           "subtitle": "Mais opções, menos esforço",
           "description": "Mais de 150 parceiros para garantir o melhor serviço.",
-          "image": "/img/Imagem5.svg",
-          "$bgColor": "#e3f4f8"
+          "image": "/img/Imagem5.svg"
         },
         {
           "title": "Gestão Multi-Site",
           "subtitle": "Tudo em um só lugar",
           "description": "Controle todos os programas de transporte da sua empresa num único lugar.",
-          "image": "/img/image-png-May-09-2025-06-31-23-7341-PM.png",
-          "$bgColor": "#e6feef"
+          "image": "/img/image-png-May-09-2025-06-31-23-7341-PM.png"
         },
         {
           "title": "Reports IA",
           "subtitle": "Dados que impulsionam decisões",
           "description": "Acesse relatórios completos com insights gerados por inteligência artificial. Monitore o desempenho, identifique oportunidades e otimize a operação em tempo real.",
-          "image": "/img/image-png-May-09-2025-06-41-46-0693-PM.png",
-          "$bgColor": "#fcf2e2"
+          "image": "/img/image-png-May-09-2025-06-41-46-0693-PM.png"
         },
         {
           "title": "Rotas Otimizadas",
           "subtitle": "Poupe custos e tempo",
           "description": "Definimos as melhores rotas para o transporte de colaboradores, otimizando tempo e custos.",
-          "image": "/img/image-png-May-09-2025-06-45-33-1338-PM.png",
-          "$bgColor": "#fcf2e2"
+          "image": "/img/image-png-May-09-2025-06-45-33-1338-PM.png"
         }
       ]
     },
     "benefits": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "title": "Economia, produtividade e bem-estar para seus colaboradores",
       "items": [
@@ -235,7 +223,6 @@
     },
     "stats": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "title": "Resultados que falam por si",
       "metrics": [
@@ -259,7 +246,6 @@
     },
     "testimonials": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "title": "Histórias reais, Resultados reais",
       "items": [
@@ -279,7 +265,6 @@
     },
     "howItWorks": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "title": "Veja como é fácil e rápido começar!",
       "steps": [
@@ -302,7 +287,6 @@
     },
     "finalCta": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "title": "Pronto para otimizar o transporte da sua empresa?",
       "description": "Fale com nossos especialistas e descubra como transformar o deslocamento dos seus colaboradores em uma solução mais eficiente, econômica e estratégica.",
@@ -312,7 +296,6 @@
     },
     "esgCommitment": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
       "title": "Nosso Compromisso",
       "subtitle": "Seu melhor aliado para atingir suas metas ESG",
       "certificationTitle": "Provedor Certificado ESG",
@@ -340,7 +323,6 @@
     },
     "faq": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "title": "Perguntas Frequentes",
       "items": [
@@ -368,7 +350,6 @@
     },
     "footer": {
       "active": true,
-      "$bgColor": "linear-gradient(90deg, rgba(255, 165, 0, 1) 10%, rgba(255, 165, 0, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
 
       "copyright": "Copyright © 2025 GOLFFOX All Rights Reserved."
     }
