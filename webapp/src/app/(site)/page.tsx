@@ -14,9 +14,12 @@ import EsgCommitment from "../../components/EsgCommitment";
 import Footer from "../../components/Footer";
 import Stats from "../../components/Stats";
 import Faq from "../../components/FAQ";
-import { fetchSchema } from "../../actions/page-data/schema-bus";
+import { Strapi } from "../../utils/strapi";
 export default async function SitePage() {
-  const schema = await fetchSchema().catch((error) => {
+  const schema = await Strapi.public("config", {
+    next: { revalidate: 120 },
+    cache: "force-cache",
+  }).catch((error: any) => {
     console.error("Error fetching schema:", error);
     return null;
   });
