@@ -9,7 +9,7 @@ interface CtaProps {
 }
 
 export default function Cta(data: CtaProps) {
-  const { subtitle, anchor, primaryColor, $bgColor, active } = data;
+  const { subtitle, anchor, title, $bgColor, active } = data;
   if (active === false) return null;
   return (
     <section className="py-16" id={anchor} style={{ background: $bgColor }}>
@@ -19,11 +19,7 @@ export default function Cta(data: CtaProps) {
             className="text-3xl lg:text-4xl font-bold"
             style={{ color: "#000", lineHeight: "1.15" }}
           >
-            Pronto para{" "}
-            <span style={{ color: primaryColor }}>
-              transformar o transporte
-            </span>{" "}
-            da sua empresa?
+            {title}
           </h2>
           <p className="text-lg leading-relaxed">{subtitle}</p>
         </div>

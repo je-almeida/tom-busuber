@@ -1,3 +1,4 @@
+import { QuoteIcon } from "lucide-react";
 import Image from "next/image";
 
 interface Testimonial {
@@ -9,6 +10,8 @@ interface TestimonialsProps {
   title: string;
   items: Testimonial[];
   $bgColor?: string;
+  primaryColor: string;
+  secondaryColor: string;
   active?: boolean;
 }
 
@@ -16,6 +19,8 @@ export default function Testimonials({
   title,
   items,
   $bgColor,
+  primaryColor,
+  secondaryColor,
   active,
 }: TestimonialsProps) {
   if (active === false) return null;
@@ -40,13 +45,7 @@ export default function Testimonials({
               <div className="space-y-6">
                 {/* Quote Icon */}
                 <div>
-                  <Image
-                    src="/img/quote.svg"
-                    alt="Quote"
-                    width={58}
-                    height={40}
-                    className="mb-4"
-                  />
+                  <QuoteIcon color={primaryColor} />
                 </div>
 
                 {/* Quote Text */}
@@ -55,7 +54,10 @@ export default function Testimonials({
                 </p>
 
                 {/* Company */}
-                <div className="text-sm font-bold" style={{ color: "#00bf6f" }}>
+                <div
+                  className="text-sm font-bold"
+                  style={{ color: secondaryColor }}
+                >
                   {testimonial.company}
                 </div>
               </div>

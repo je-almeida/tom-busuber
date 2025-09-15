@@ -62,7 +62,11 @@ export default async function SitePage() {
 
       <Stats {...data.stats} primaryColor={branding.primaryColor} />
 
-      <Testimonials {...data.testimonials} />
+      <Testimonials
+        {...data.testimonials}
+        primaryColor={branding.primaryColor}
+        secondaryColor={branding.secondaryColor}
+      />
 
       <HowItWorks {...data.howItWorks} primaryColor={branding.primaryColor} />
 
