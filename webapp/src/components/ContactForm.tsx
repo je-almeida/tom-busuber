@@ -1,5 +1,6 @@
 "use client";
 
+import { Check, CheckIcon, Loader, XIcon } from "lucide-react";
 import { useState } from "react";
 
 interface FormField {
@@ -40,7 +41,11 @@ export default function ContactForm(data: ContactFormProps) {
     $bgColor,
   } = data;
   const [formData, setFormData] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{
+    text: string;
+    type: "success" | "error";
+  } | null>();
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -65,7 +70,7 @@ export default function ContactForm(data: ContactFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsLoading(true);
 
     try {
       const response = await fetch("/api/form", {
@@ -77,16 +82,25 @@ export default function ContactForm(data: ContactFormProps) {
       });
 
       if (response.ok) {
-        alert("Formulário enviado com sucesso!");
+        setMessage({
+          text: "Formulário enviado com sucesso!",
+          type: "success",
+        });
         setFormData({});
       } else {
-        alert("Erro ao enviar formulário. Tente novamente.");
+        setMessage({
+          text: "Erro ao enviar formulário. Tente novamente.",
+          type: "error",
+        });
       }
     } catch (error) {
       console.error("Erro:", error);
-      alert("Erro ao enviar formulário. Tente novamente.");
+      setMessage({
+        text: "Erro ao enviar formulário. Tente novamente.",
+        type: "error",
+      });
     } finally {
-      setIsSubmitting(false);
+      setIsLoading(false);
     }
   };
 
@@ -257,12 +271,27 @@ export default function ContactForm(data: ContactFormProps) {
             <div className="text-center pt-6">
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isLoading}
                 className="px-10 py-4 text-white font-bold rounded-lg text-lg transition-colors hover:opacity-90 disabled:opacity-50"
                 style={{ backgroundColor: primaryColor, color: secondaryColor }}
               >
-                {isSubmitting ? "Enviando..." : submitText}
+                {isLoading ? <Loader className="animate-spin" /> : submitText}
               </button>
+              {message && (
+                <p
+                  className={`mt-4 text-sm ${
+                    message.type === "error" ? "text-red-500" : "text-green-500"
+                  }`}
+                >
+                  {message.text}{" "}
+                  {message.type === "success" && (
+                    <CheckIcon color="green" className="inline-block ml-1" />
+                  )}
+                  {message.type === "error" && (
+                    <XIcon color="red" className="inline-block ml-1" />
+                  )}
+                </p>
+              )}
             </div>
           </div>
         </form>
