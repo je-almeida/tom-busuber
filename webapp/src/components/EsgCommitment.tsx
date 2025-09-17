@@ -7,6 +7,9 @@ interface Logo {
 
 interface EsgCommitmentProps {
   title: string;
+  part1: string;
+  part2: string;
+  text: string;
   subtitle: string;
   certificationTitle: string;
   certificationDescription: string;
@@ -21,6 +24,9 @@ interface EsgCommitmentProps {
 export default function EsgCommitment(data: EsgCommitmentProps) {
   const {
     title,
+    part1,
+    part2,
+    text,
     logoRight,
     certificationTitle,
     certificationDescription,
@@ -42,8 +48,7 @@ export default function EsgCommitment(data: EsgCommitmentProps) {
             <div>
               <h3 className="text-xl text-gray-600 mb-2">{title}</h3>
               <h2 className="text-2xl lg:text-4xl font-bold">
-                Seu melhor aliado para atingir suas{" "}
-                <span style={{ color: primaryColor }}>metas ESG</span>
+                {part1} <span style={{ color: primaryColor }}>{part2}</span>
               </h2>
             </div>
           </div>
@@ -59,9 +64,7 @@ export default function EsgCommitment(data: EsgCommitmentProps) {
                 height={31}
                 className="mx-auto mb-2"
               />
-              <p className="text-gray-600 text-sm">
-                Scope 3 Emissions Planning and Reporting
-              </p>
+              <p className="text-gray-600 text-sm">{text}</p>
             </div>
 
             {/* Certification Logos */}
