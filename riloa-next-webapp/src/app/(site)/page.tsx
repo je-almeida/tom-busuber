@@ -9,7 +9,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 export default async function Home() {
   const dataSite = await getDataSite();
-  const data = dataSite.dados_site;
+  const data = dataSite.dados_site as SiteData;
   // const data = datasite as SiteData;
 
   if (!data) {
