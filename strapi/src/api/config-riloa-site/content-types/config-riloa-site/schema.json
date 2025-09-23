@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "config_riloa_sites",
+  "info": {
+    "singularName": "config-riloa-site",
+    "pluralName": "config-riloa-sites",
+    "displayName": "Config Riloa Site"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dados_site": {
+      "type": "json"
+    }
+  }
+}

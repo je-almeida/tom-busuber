@@ -373,6 +373,35 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiConfigRiloaSiteConfigRiloaSite
+  extends Struct.SingleTypeSchema {
+  collectionName: 'config_riloa_sites';
+  info: {
+    displayName: 'Config Riloa Site';
+    pluralName: 'config-riloa-sites';
+    singularName: 'config-riloa-site';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dados_site: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::config-riloa-site.config-riloa-site'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiConfigConfig extends Struct.SingleTypeSchema {
   collectionName: 'configs';
   info: {
@@ -952,6 +981,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::config-riloa-site.config-riloa-site': ApiConfigRiloaSiteConfigRiloaSite;
       'api::config.config': ApiConfigConfig;
       'api::form-lead.form-lead': ApiFormLeadFormLead;
       'plugin::content-releases.release': PluginContentReleasesRelease;
