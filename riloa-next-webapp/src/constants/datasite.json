@@ -1,0 +1,164 @@
+{
+  "logo": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+  "header": {
+    "items": [
+      {
+        "label": "Home",
+        "link": "#comunicacaoxyt"
+      },
+      {
+        "label": "Features",
+        "link": "#features"
+      },
+      {
+        "label": "Pricing",
+        "link": "#banner1"
+      },
+      {
+        "label": "Contact",
+        "link": "#contact"
+      }
+    ]
+  },
+  "items": [
+    {
+      "type": "banner",
+      "id": "banner1",
+      "title": "Welcome to Riloa",
+      "inverted": false,
+      "text": "Your gateway to seamless solutions",
+      "imageUrl": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+      "btn1": {
+        "label": "Learn More",
+        "link": "#learn-more"
+      },
+      "btn2": {
+        "label": "Get Started",
+        "link": "#get-started"
+      }
+    },
+    {
+      "id": "suggestions1",
+      "type": "suggestions",
+      "title": "Sugestões",
+      "items": [
+        {
+          "title": "Ride",
+          "text": "Vá a qualquer lugar com o app da Uber. Solicite uma viagem, faça o pedido blablabla",
+          "imageUrl": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+          "btn": {
+            "label": "Informações",
+            "link": "#features"
+          }
+        },
+        {
+          "title": "Ride4",
+          "text": "Vá a qualquer lugar com o app da Uber. Solicite uma viagem, faça o pedido blablabla",
+          "imageUrl": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+          "btn": {
+            "label": "Informações",
+            "link": "#features"
+          }
+        }
+      ]
+    },
+    {
+      "id": "features",
+      "type": "banner",
+      "title": "Welcome to Riloa",
+      "inverted": true,
+      "text": "Your gateway to seamless solutions",
+      "imageUrl": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+      "btn1": {
+        "label": "Learn More",
+        "link": "#learn-more"
+      },
+      "btn2": {
+        "label": "Get Started",
+        "link": "#get-started"
+      }
+    },
+    {
+      "id": "comunicacaoxyt",
+      "type": "suggestions",
+      "title": "Sugestões",
+      "items": [
+        {
+          "title": "Ride",
+          "text": "Vá a qualquer lugar com o app da Uber. Solicite uma viagem, faça o pedido blablabla",
+          "imageUrl": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+          "btn": {
+            "label": "Informações",
+            "link": "#features"
+          }
+        },
+        {
+          "title": "Ride2",
+          "text": "Vá a qualquer lugar com o app da Uber. Solicite uma viagem, faça o pedido blablabla",
+          "imageUrl": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+          "btn": {
+            "label": "Informações",
+            "link": "#features"
+          }
+        },
+        {
+          "title": "Ride3",
+          "text": "Vá a qualquer lugar com o app da Uber. Solicite uma viagem, faça o pedido blablabla",
+          "imageUrl": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+          "btn": {
+            "label": "Informações",
+            "link": "#features"
+          }
+        },
+        {
+          "title": "Ride4",
+          "text": "Vá! a qualquer lugar com o app da Uber. Solicite uma viagem, faça o pedido blablabla",
+          "imageUrl": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+          "btn": {
+            "label": "Navegue",
+            "link": "#features"
+          }
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "text": "© 2024 Riloa. All rights reserved.",
+    "links": [
+      {
+        "label": "Privacy Policy",
+        "link": "#banner1"
+      },
+      {
+        "label": "Terms of Service",
+        "link": "#terms-of-service"
+      },
+      {
+        "label": "Contact Us",
+        "link": "#contact-us"
+      }
+    ],
+    "socials": [
+      {
+        "platform": "Facebook",
+        "icon": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+        "link": "http://facebook.com/riloa"
+      },
+      {
+        "platform": "Twitter",
+        "icon": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+        "link": "http://twitter.com/riloa"
+      },
+      {
+        "platform": "LinkedIn",
+        "icon": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+        "link": "http://linkedin.com/company/riloa"
+      },
+      {
+        "platform": "LinkedIn",
+        "icon": "http://localhost:1337/uploads/2560px_EPA_logo_svg_e6cd5ff4d1.png",
+        "link": "http://linkedin.com/company/riloa"
+      }
+    ]
+  }
+}
