@@ -1,3 +1,5 @@
+import { FormField } from "../components/ContactForm";
+
 type Button = {
   label: string;
   link: string;
@@ -28,7 +30,23 @@ export type BannerType = {
   btn2?: Button;
 };
 
-type Item = BannerType | SuggestionType;
+export type FormType = {
+  id?: string;
+  type?: "form";
+  title: string;
+  subtitle: string;
+  fields: FormField[];
+  consent: {
+    text: string;
+    required: boolean;
+  };
+  submitText: string;
+  primaryColor: string;
+  secondaryColor: string;
+  $bgColor?: string;
+};
+
+type Item = BannerType | SuggestionType | FormType;
 
 type HeaderItem = {
   label: string;

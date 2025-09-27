@@ -472,6 +472,38 @@ export interface ApiFormLeadFormLead extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiRiloaFormLeadRiloaFormLead
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'riloa_form_leads';
+  info: {
+    displayName: 'Riloa Form Lead';
+    pluralName: 'riloa-form-leads';
+    singularName: 'riloa-form-lead';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    details: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::riloa-form-lead.riloa-form-lead'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -984,6 +1016,7 @@ declare module '@strapi/strapi' {
       'api::config-riloa-site.config-riloa-site': ApiConfigRiloaSiteConfigRiloaSite;
       'api::config.config': ApiConfigConfig;
       'api::form-lead.form-lead': ApiFormLeadFormLead;
+      'api::riloa-form-lead.riloa-form-lead': ApiRiloaFormLeadRiloaFormLead;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

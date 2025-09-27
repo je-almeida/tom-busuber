@@ -1,0 +1,7 @@
+/**
+ * riloa-form-lead router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::riloa-form-lead.riloa-form-lead');

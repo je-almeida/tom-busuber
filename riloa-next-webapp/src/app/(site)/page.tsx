@@ -7,6 +7,7 @@ import Suggestions from "../../components/Suggestions";
 import { SiteData } from "../../types/SiteData";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import ContactForm from "../../components/ContactForm";
 export default async function Home() {
   const dataSite = await getDataSite();
   const data = dataSite.dados_site as SiteData;
@@ -48,6 +49,21 @@ export default async function Home() {
               key={index}
               title={item.title}
               items={item.items}
+            />
+          );
+        } else if (item.type === "form") {
+          return (
+            <ContactForm
+              key={index}
+              id={item.id}
+              active={true}
+              title={item.title}
+              subtitle={item.subtitle}
+              fields={item.fields}
+              submitText={item.submitText || "Enviar"}
+              primaryColor={item.primaryColor}
+              secondaryColor={item.secondaryColor}
+              $bgColor={item.$bgColor}
             />
           );
         }

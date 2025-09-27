@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "riloa_form_leads",
+  "info": {
+    "singularName": "riloa-form-lead",
+    "pluralName": "riloa-form-leads",
+    "displayName": "Riloa Form Lead"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "details": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}
