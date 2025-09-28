@@ -15,9 +15,9 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         data: {
           email: data.email,
-          nome: data.nome,
-          telefone: data.telefone,
-          detalhes: data.detalhes,
+          name: data.name,
+          phone: data.phone,
+          details: data.details,
         },
       }),
     });

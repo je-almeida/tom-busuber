@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "admin.golffox.com.br",
+        pathname: "/uploads/**",
+      },
+      {
+        protocol: "https",
         hostname: "busuber-api.n3zvwn.easypanel.host",
         pathname: "/uploads/**",
       },
